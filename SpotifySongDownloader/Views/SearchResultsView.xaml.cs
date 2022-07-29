@@ -21,6 +21,7 @@ using Ookii.Dialogs.Wpf;
 using YoutubeExplode;
 using HandyControl.Controls;
 using HandyControl.Tools.Extension;
+using System.Net.Cache;
 
 namespace SpotifySongDownloader.Views
 {
@@ -36,15 +37,15 @@ namespace SpotifySongDownloader.Views
             Growl.Clear();
         }
 
-        private void Init()
+        private async void Init()
         {
             foreach (var track in Globals.CardTracksList)
             {
-                TrackList.Items.Add(CreateCard(track));
+                TrackList.Items.Add(await CreateCard(track));
             }
         }
 
-        private Card CreateCard(Track track)
+        private async Task<Card> CreateCard(Track track)
         {
             Card card = new Card()
             {
@@ -66,7 +67,7 @@ namespace SpotifySongDownloader.Views
             {
                 Width = 240,
                 Height = 240,
-                Source = new BitmapImage(new Uri(track.ImageUrl)),
+                Source = new BitmapImage(new Uri(track.ImageUrl), new RequestCachePolicy(RequestCacheLevel.CacheIfAvailable)),
                 Stretch = Stretch.Uniform
             };
 

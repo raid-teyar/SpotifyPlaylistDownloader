@@ -115,7 +115,6 @@ namespace SpotifySongDownloader.Views
             }
             ProgressBar.Visibility = Visibility.Hidden;
             warining.Visibility = Visibility.Hidden;
-            ConfirmButton.Visibility = Visibility.Visible;
             Growl.Success("Finished downloading all songs :)");
         }
 
@@ -132,7 +131,7 @@ namespace SpotifySongDownloader.Views
 
                 using (WebClient client = new WebClient())
                 {
-                    byte[] dataArr = await client.DownloadDataTaskAsync(url);
+                    byte[] dataArr =  client.DownloadData(url);
                     File.WriteAllBytes(track.ImageUrl, dataArr);
                 }
             }

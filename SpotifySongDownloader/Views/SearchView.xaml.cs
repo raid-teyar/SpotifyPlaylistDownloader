@@ -66,7 +66,7 @@ namespace SpotifySongDownloader.Views
                 var track = new Models.Track()
                 {
                     Name = spotifyTrack.Track.Name,
-                    ImageUrl = spotifyTrack.Track.Album.Images[1].Url,
+                    ImageUrl = spotifyTrack.Track.Album.Images[0].Url,
                     Duration = spotifyTrack.Track.Duration_ms,
                 };
                 track.Artists = GetArtistsNames(spotifyTrack.Track.Artists);

@@ -32,15 +32,6 @@
                     Foreground="{DynamicResource PrimaryBrush}"
                     Style="{StaticResource ButtonIcon}" />
 
-                <Button
-                    x:Name="ConfirmButton"
-                    Visibility="Hidden"
-                    Width="120"
-                    Margin="40"
-                    VerticalAlignment="Bottom"
-                    Content="Close"
-                    Style="{DynamicResource ButtonSuccess}" />
-
                 <ProgressBar
                     x:Name="ProgressBar"
                     Margin="40"
