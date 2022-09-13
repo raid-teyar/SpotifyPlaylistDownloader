@@ -42,7 +42,7 @@
                     Margin="10"
                     VerticalAlignment="Bottom"
                     Style="{DynamicResource TextBlockDefaultWarning}"
-                    Text="*please consider not opening any song while it's still downloading, that may crush the app" />
+                    Text="*please consider not opening any song while it's still downloading, that may crash the app" />
             </Grid>
         </hc:SimplePanel>
     </hc:TransitioningContentControl>
