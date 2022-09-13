@@ -13,6 +13,7 @@ namespace SpotifySongDownloader.Services
 {
     public class SpotifyService
     {
+        // this a public token anyone can get by making a public call, still i know its bad practice to put it here tho
         private string _spotifyToken = "BQCZOHiFnSqDVqVYF9oL-d1lY93TJdLPGcTxuSmkOK9w0WmC5GN3cOZAm3V7JNUvPJMFZFP6JwpmvxqKZGMavujdHKlOClfREKJYOSKTBYY61VUupK4";
 
         public int FullTrack { get; private set; }
