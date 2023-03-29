@@ -17,31 +17,29 @@
     <hc:TransitioningContentControl TransitionMode="Right2LeftWithFade">
         <Grid>
             <ListBox
-            x:Name="TrackList"
-            Margin="32"
-            BorderThickness="0"
-            Style="{StaticResource WrapPanelHorizontalListBox}">
-                
-            </ListBox>
+                x:Name="TrackList"
+                Margin="32"
+                BorderThickness="0"
+                Style="{StaticResource WrapPanelHorizontalListBox}" />
             <Button
-                ToolTip="Download"
-                ToolTipService.Placement="Top"
-                ToolTipService.HasDropShadow="True"
-                ToolTipService.InitialShowDelay="100"
-                Cursor="Hand"
-                Effect="{StaticResource EffectShadow3}"
-                Height="90"
                 Width="90"
-                Padding="0 25"
-                VerticalAlignment="Bottom"
-                HorizontalAlignment="Right"
+                Height="90"
                 Margin="30"
+                Padding="0,25"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
                 hc:IconElement.Geometry="{StaticResource DownloadGeometry}"
                 Background="{StaticResource PrimaryBrush}"
+                Click="DownloadClick"
+                Cursor="Hand"
+                Effect="{StaticResource EffectShadow3}"
                 Foreground="White"
                 Style="{StaticResource ButtonIconCircular}"
-                Click="DownloadClick"/>
+                ToolTip="Download"
+                ToolTipService.HasDropShadow="True"
+                ToolTipService.InitialShowDelay="100"
+                ToolTipService.Placement="Top" />
         </Grid>
-       
+
     </hc:TransitioningContentControl>
 </Page>
