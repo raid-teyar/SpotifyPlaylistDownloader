@@ -26,7 +26,7 @@ We all know that its not possible to download songs from the spotify API without
 ![image](https://user-images.githubusercontent.com/63502859/181787357-ab1a1ffe-ac49-4db5-9223-ca5584120260.png)
 
 ## Requirements
-To build and run the Smart Home solution, you will need:
+To build and run this application, you will need:
 
 - Visual Studio 2019 or later
 - .NET 6.0 or later
